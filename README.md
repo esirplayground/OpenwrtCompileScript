@@ -1,5 +1,6 @@
 # OpenwrtCompileScript
 
+![CompileScript](doc/CompileScript.PNG) 
 ## 序言
 
 用于辅助Openwrt编译，但不会帮你完成整个编译过程，需要一点Openwrt编译基础
@@ -19,6 +20,8 @@ The script is made to work on these OS :
 - Ubuntu 16.4
 - Ubuntu 18.4 （首选，脚本基于此版本编写测试）
 - win10子系统（ubuntu 18.04 LTS）
+- Github Gitpod云编译(参考：https://www.right.com.cn/forum/thread-1573038-1-1.html)
+- Deepin 15.11桌面版（群友测试ok）
 
 ## Usage 使用方法
 
@@ -47,9 +50,28 @@ https://www.right.com.cn/forum/thread-345378-1-1.html
 
 ## 版本修改记录
 
+### ++2.8版本
+
+1. 更新dl下载代码，
+2. 补全if判断代码
+3. 修复之前代码不完整
+4. 新增变量openwrt_shfile
+5. 调整代码的阅读顺序，方便阅读调整
+6. 环境依赖加入判断，防止报错
+7. openwrt加入lean插件功能
+8. 颜色调整，方便阅读
+9.  新增功能按键 更新lean仓库
+10. 编写OpenwrtCompileScript使用说明.pdf
+11. 将二次编译与源码更新模块合并，并加入显示远端仓库的最近三条更新内容模块
+12. 加入比较源码参数
+13. 取消官方源码强制https
+14. 合并左右的部分脚本代码
+15. 删除dl国内服务器下载功能选项
+16. 增加software_Setting_Public模块
+
 ### ++2.7版本
 
-1. 修改脚本名字为《openwr.sh》不再以版本命名，以后执行脚本bash openwrt.sh即可
+1. 修改脚本名字为《openwrt.sh》不再以版本命名，以后执行脚本bash openwrt.sh即可
 2. 加入if判断是否源码下载成功
 3. Dl服务器下载增加一个参数，解决证书不信任问题
 4. 增加脚本描述文本
